@@ -19,5 +19,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/https://elsa606.github.io/'
+  base: '/elsa606.github.io/'
 }));
