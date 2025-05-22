@@ -236,6 +236,7 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProjectCard
             title="Crossroads Classic Analytics Challenge"
+            caption="NCAA prediction using Tableau & XGBoost"
             description={[
               "Predicted NCAA March Madness semifinalists and champion based on user-submitted brackets; analyzed the impact of school affiliation on bracket decisions.",
               "Built an interactive Tableau dashboard to visualize exploratory data and extract key insights for feature engineering.",

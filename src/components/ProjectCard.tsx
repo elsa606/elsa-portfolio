@@ -3,13 +3,14 @@ import { cn } from '@/lib/utils';
 
 export interface ProjectProps {
   title: string;
-  description: string[] | string; // Modified to accept either string array or string
+  caption?: string; // Added optional caption
+  description: string[] | string;
   tools: string[];
   outcome: string;
   className?: string;
 }
 
-const ProjectCard = ({ title, description, tools, outcome, className }: ProjectProps) => {
+const ProjectCard = ({ title, caption, description, tools, outcome, className }: ProjectProps) => {
   return (
     <div className={cn(
       "bg-white rounded-lg shadow-md p-6 card-hover",
@@ -18,6 +19,13 @@ const ProjectCard = ({ title, description, tools, outcome, className }: ProjectP
       <h3 className="text-xl font-semibold text-morandi-blue-dark mb-2 font-montserrat">
         {title}
       </h3>
+      
+      {/* Display caption if provided */}
+      {caption && (
+        <p className="text-morandi-blue font-medium mb-2">
+          {caption}
+        </p>
+      )}
       
       {/* Handle both string and array descriptions */}
       {typeof description === 'string' ? (

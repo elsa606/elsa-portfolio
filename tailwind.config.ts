@@ -67,11 +67,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Updated Morandi color palette with darker blues
+				// Restored to the softer Morandi blue color palette
 				morandi: {
 					blue: {
-						light: '#6D8599', // Darker than previous #A5B5C5
-						DEFAULT: '#4F6680', // Darker than previous #8799AD
+						light: '#A5B5C5', // Restored to softer blue
+						DEFAULT: '#8799AD', // Restored to softer blue
 						dark: '#33465C', // Kept the same
 					},
 					neutral: {
