@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 
 export interface ProjectProps {
   title: string;
-  description: string;
+  description: string[] | string; // Modified to accept either string array or string
   tools: string[];
   outcome: string;
   className?: string;
@@ -19,9 +19,18 @@ const ProjectCard = ({ title, description, tools, outcome, className }: ProjectP
         {title}
       </h3>
       
-      <p className="text-gray-600 mb-4">
-        {description}
-      </p>
+      {/* Handle both string and array descriptions */}
+      {typeof description === 'string' ? (
+        <p className="text-gray-600 mb-4">
+          {description}
+        </p>
+      ) : (
+        <ul className="list-disc pl-5 text-gray-600 mb-4 space-y-1">
+          {description.map((item, index) => (
+            <li key={index} className="text-sm">{item}</li>
+          ))}
+        </ul>
+      )}
       
       <div className="mb-4">
         <h4 className="text-sm font-medium text-morandi-blue-dark mb-2">Tools & Technologies</h4>

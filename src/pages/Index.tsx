@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { 
@@ -237,11 +236,16 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProjectCard
             title="Crossroads Classic Analytics Challenge"
-            description="NCAA prediction using Tableau & XGBoost"
+            description={[
+              "Predicted NCAA March Madness semifinalists and champion based on user-submitted brackets; analyzed the impact of school affiliation on bracket decisions.",
+              "Built an interactive Tableau dashboard to visualize exploratory data and extract key insights for feature engineering.",
+              "Achieved 5th place out of 87 teams in a Kaggle competition by developing an XGBoost ensemble model, reaching a weighted accuracy of 0.63085."
+            ]}
             tools={["Tableau", "XGBoost", "Python"]}
             outcome="Placed 5th out of 87 teams in the competition"
             data-animate
           />
+          
           
           <ProjectCard
             title="Bankruptcy Prediction (Kaggle)"
